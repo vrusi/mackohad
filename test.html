@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8000/ -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- jQuery -->
+    <script
+      src="./test_files/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./test_files/bootstrap.min.css" />
+    <script src="./test_files/bootstrap.min.js"></script>
+
+    <!-- housenka -->
+    <script type="text/javascript" src="./test_files/mackohad.js"></script>
+    <title>mackohad</title>
+  </head>
+  <body>
+    <div class="d-block">
+      <div class="d-flex">
+        <canvas width="1968" height="1488">canvas</canvas>
+        <div class="ml-3">
+          <p id="level" class="h3">1. bludisko | 1</p>
+          <p id="lives" class="h3">2&nbsp;životy</p>
+          <p id="keys" class="h3">0&nbsp;kľúčov</p>
+          <p id="points" class="h3">0 | 0&nbsp;bodov</p>
+        </div>
+      </div>
+
+      <div>
+        <p id="resultNew" class="h3">
+          Náraz do steny mačkohada dosť bolí, našťastie ale máte ďalší život
+          (vraciate sa na začiatok tohto bludiska).
+        </p>
+      </div>
+    </div>
+    <audio controls="true" loop="true">
+      <source src="public/soundtrack.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>

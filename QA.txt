@@ -1,0 +1,190 @@
+Q: Umoznit ovladanie pomocou tlacitok zobrazenych na stranke (aj z inej session, cez zdielany kod/pin) - co sa mysli pod "z inej session.."?
+A: napr. iny prehliadac, alebo ine zariadenie, alebo incognito/private window
+
+Q: Otazka k bodu 7.: po prihlaseni/registracii musi sa zobrazit plocha z hrou alebo zoznam s aktualnymi hramo, ktore mozem sledovat alebo sa musi nacitat uchovana hra?
+A: as you wish
+
+Q: Kde sa musi uchovavat plocha? Na servere alebo u klienta ako subor?
+A: plocha sa uchovava na serveri, aktualna sa posle ku klientovi, kde sa vykresluje
+
+Q: Ako mozme uchovavat udaje bez DB?s
+A: ako sa uchovavaju udaje?
+
+Q: Ci spravne rozumiem, ze mozeme urobit aj nie SPA? Ak ano a html subor moze byt max 1, ako to musi vyzerat?
+A: nie, robite SPA bez pouzitia SPA frameworku
+
+Q: Import a export - musi byt ovladane nejakymi tlacidlami?
+A: bolo by fajn. aku inu predstavu mate?
+
+Q: Aky je rozdiel medzi bodmi 1-3 a bodom 8? (nechapeme co sa mysli v bode 8 - zdielanie session..)
+A: ked sa klient prihlasi k serveru, vytvori sa im ich unikatna session
+
+Q: Dobry den, mam este otazku: na prepisovanie html2json a json2html musime pisat svoj kod alebo mozme pouzivat aj externe kniznice, napriklad: https://github.com/Jxck/html2json?
+A: Na toto napiste svoj kod.
+
+Q: Prosím vás a ten JSON ked dostaneme na klienta a prerobime na HTML môžme šupnúť cez document.write? resp. dat to ako innerHTML do body
+A: Odporucam si pozriet p2.2.mkv konkretne 18tu - 19tu minutu.
+Q: každopadne pochopila som aj podla zvuku, takze sa este musime s kazdym elementom paprat a pridavat ho tam aj ked mame cele htmlko rozparsovane z toho JSONU?
+A: https://www.mit.edu/~xela/tao.html The wise programmer is told about Tao and follows it. The average programmer is told about Tao and searches for it. The foolish programmer is told about Tao and laughs at it.
+If it were not for laughter, there would be no Tao.
+The highest sounds are hardest to hear. Going forward is a way to retreat. Great talent shows itself late in life. Even a perfect program still has bugs.
+
+Q: to ovládanie mám chápať tak... že sa mi zobrazi na page 4 buttony a proste hýbem kamaratoveho hada?
+A: jop, tymi tlacidlami
+
+Q: Môžem cez websocket posielať zmenu bodov zo server, v prípade, keď housenka zje jedlo alebo kľúč ?
+A: ano
+
+Q: Môžem používať JSON.stringify() a parse.JSON() ?
+A: ano
+
+Q: Klient pre housenku ma handlovat aj prihlasenie a parsovanie JSONu s html tagmi, alebo sa stara iba o renderovanie housenky ?
+A: klient ma viacero obrazoviek/stranok
+
+Q: Môžem použiť body-parser ?
+A: ano
+
+Q: Ak sa klient stara o všetko renderovanie, tak môže renderovať len html, ktoré dostane v JSONe od serveru, alebo si môže po nejakej odpovedi na request vygenerovať čo potrebuje ? 
+A: mal by renderovat co dostane. Ak odpoved nepride, moze renderovat chybove hlasky.
+
+Q: Obrazky z internetu môžem načítať ako objekty Image na klientovi ?
+A: Obrazky ako minule zadanie.
+
+Q: Ak nastane príprad, keď pošlem plochu cez ajax namiesto websocketu, tak to bude zle ? 
+A: plochu posielat cez websocket, nie cez ajax
+
+Q: Klientova session ma byt connectnuta aj s websocketom na porte 8082 alebo staci spojenie so sreverom na 8080 ?
+A: co ma byt ako prepojene vypliva zo zadania
+
+
+Q: ak už teda budeme mať session manežment, neprihlásený používateľ bude mať všetko skóre v session... ako je to s prihláseným?
+A: na serveri sa uklada naj skore a level
+
+Q: bude mať max scóre v tabuľke?
+A: podla zadania
+
+Q: keď sa teda raz zaregistrujeme do aplikácie... bude tomuto uzivateovi priradená unikátna session?
+A: implementacia session je na tebe
+
+Q: co ak sa odhlasim a potom sa znovu prihlasim z ineho browsera... teda iná session
+A: tak by system mal pristupovat k tvojim pouzivatelskym udajom podla konta a nie podla session
+
+Q: mám prepísať v tomto novom browsery session? teda v cookie? alebo to má komunikovať na základe niečoho iného?
+A: session je unikatna, nemal by si mat dovod ju prepisovat.
+
+Q: "serverside ukladanie max skore a levelu pre prihlaseneho pouzivatela (inter session) a neprihlaseneho pouzivatela (in session)" problém je v tom, že nerozumiem pojmom "inter session" a "in session" ... je možné to nejako priblížiť?
+A: inter session - medzi sessnami = prihlasim sa, nahram 100, ulozi sa mi v profile 100, prihlasim sa z ineho zariadenia, zobrazi sa mi max nahrane 100 a ked nahram 200, uz bude na serveri 200, cize bez ohladu na session, moje profil udaje su rovnake
+in-session - v ramci session = zapnem browser, hram sa, nahram 100. refreshnem stranku, vidim 100 lebo som v jednej session.
+
+Q: Musí sa v browseri meniť URL, keď sa budem prepínať z hry na prihlásenie alebo registráciu, alebo to môže fungovať ako conditional rendering v Reacte ?
+A: renderuj co ti vrati server. Ako spravis routing je na tebe.
+
+Q: "zozbrazit zoznam aktualne hranych hier s moznostou sledovania (napr. neprihlaseny bez pinu) pre vsetkych pouzivatelov"
+"leaderboard (#, meno, top score, top level; zotriedenie podla top score)"
+tieto dva body mám chápať tak, že keď dostane klient prvotnú stránku tak tam vidí aj tieto zoznamy?
+k tomu sledovanie hier... znamená to že ja si kliknem na nejakú hru z toho zoznamu, a otvori mi novu page, kde sa mi bude vykreslovat housenka kamarata?
+A: ano, husenka kamarata
+
+Q: Mozem jquery kniznicu nacitavat v HTML subore alebo musi byt nacitana cez js subor pomocou DOM? A ked pisete, ze klient ma viacero obrazoviek/stranok, mozu byt tiez vsetky uz nacitane v HTML subore, alebo sa musime drzat vzoroveho HTML suboru?
+A: jquery moze byt v basic html subore, v basic html je v body max 1 div
+
+Q: "umoznit ulozit hru do suboru a nacitat hru zo suboru (i pre neprihlasenych; ciselna reprezentacia pola plochy)" nerozumiem tomuto bodu... do akého súboru keď nemusíme používať databázy? a keď som neprihlásený tak ako by sa mi mala táto hra obnoviť zo súboru? podľa čoho?
+A: ulozenie hry do lokalneho suboru u klienta; zo suboru do session
+
+Q: "Na vsetky Ajax cally JSON. Ak robite SPA, vratite objekt/pole co bude objektova reprezentacia a v klient kniznici prerobite na elementy a pridate do DOM."
+toto mám chápať tak, že jediné čo vie klient je $.get(something) a nebude mať žiaden kód u seba pre vytváranie nejakej stránky?
+teda ja keď odpállim script u klienta dá get(prvotná inicializácia) a server mu pošle JSON? teda na serveri mám HARDCODE predprivané JSON ktoré len podľa požiadavky pošlem na clienta a ten už to nejako rozparsuje a vytvorí si page?
+A: hej, na serveri predpripravene (odporucanie je generovane, nie hardcoded) JSONy
+
+Q: "ano, husenka kamarata" to znamená že ja musím tej husenici pridať ďalší socket? aby to vykreslovanie išlo aj tomu, čo práve hrá hru a aj mne, ktorý sa chcem len pozerať? so socketmi som sa stretol prvý krát na tomto predmmete... na toto si neviem nejako sám nájsť odpoveď
+A: socket server zvlada viacero spojeni, ktoremu spojeniu co poslete a ako je na vas
+
+Q: "import a export CSV udajov pouzivatelov (meno, email, heslo, max score, max level) len pre pouzivatela 'admin' " tak tomuto bodu ani najmenej nerozumiem čo máme urobiť
+A: admin na stranke klikne save a vrati mu to subor; admin zoberie file do inputu a da load a nahra mu to profili pouzivatelov na server
+
+Q: "admin na stranke klikne save a vrati mu to subor" takže koniec koncov nejakú databázu predsalen musíme použiť... malo by to teda prežiť reštart servera? že zapnem znovu, nahram DB userov a tí sa už len prihlasujú?
+A: nie, server ked crashne tak si nic nepamata
+
+Q: takže pod pojmom súbor myslíme len nejaký dynamický objekt, ktorý nám môže slúžiť ako nejaký checkPoint point? že loadneme userov a skóre z pred  minút cca
+A: mozes mu nacitat profily znovu z lokalneho suboru od klienta. nie, je to realny subor u klienta
+
+Q: subor stačí .txt?
+A: hej ale nech obsahuje csv format udajov
+
+Q: "vypisovanie aktuálneho a najlepsieho skore a levelu zo serveru (per user/session)" tento bod, je čisto iba len o tom, že hrám hru a zobrazuje mi to max dosiahnuté skóre a aktuálne? rozdiel je v tom, že ak som prihlásené ťahá to z nejakého objektu user a ak neprihlásený zo session?
+A: ano
+
+Q: "zdielanie session medzi backendom (server) a frontedom (browser)" tento bod vzhľadom na vypracovanie predchádzajúcich má ešte nejaký vyšší význam?
+A: v kontexte predoslych odpovedi nie
+
+Q: "leaderboard (#, meno, top score, top level; zotriedenie podla top score)" toto by mali vidieť všetci pouzžvatelia? cca na prvotnej stránke?
+A: ano
+
+Q: hudobná stopa môže byť uložená aj na našom serveri a odtiaľ si ju lev vytiahnem? cca mám stiahnutú pesničku z YouTube na mp3 a hotovo?
+A: nie, hudba len u klienta z externeho zdroju. njedine ze by ste mali vlastny track. kvota v AISe je 5 MB na vsetko
+
+Q: Ak padne server, tak leaderboard po opätovnom spustnení bude prázdny ?
+A: jop, leaderboard prazdny jedine ze by admin nahral novy subor s profilmi
+
+Q: ak sa teda pripojím k sledovaniu kamarátovej húsenice, má mi pri sledovaní fungovat aj stláčanie tlačidiel - ovládanie húsenice? či ja len pozerám ako sa on hýbe a nemôžem robiť nič
+A: nerobis nic, jedine ze by ti dal PIN a potom mozes ovladat z ineho zariadenia/inej stranky
+
+Q: to ovládanie mám chápať tak... že sa mi zobrazi na page 4 buttony a proste hýbem kamaratoveho hada?
+A: jop, tymi tlacidlami
+
+Q: keď prehráme hru (stratíme 3 životy), tak padne server kvôli ajaxu... netuším čo tým chcel autor povedať.. môžem to celé vyhodiť a načítať novú hru s levelom 1, 0 bodymi, 3 životami, 0 klucmi?
+A: tak velmi tu vasu husenicu hrat nebudem ale server nesmie padnut
+
+Q: "import a export CSV udajov pouzivatelov (meno, email, heslo, max score, max level) len pre pouzivatela "admin""
+"umoznit ulozit hru do suboru a nacitat hru zo suboru (i pre neprihlasenych; ciselna reprezentacia pola plochy)"
+viem že sme to riešili už vyššie  ale nerozumiem tomu... ten import má ísť zo súborov, ktoré má klient u seba? teda pre každého usera vypýta nejaký subor?
+A: otvorim stranku a vidim husenicu v dakom default stave. Namiesto hrania dam vlozit subor zo svojho lokalu a navita mi ulozenu plochu ktora sa bude dat hrat
+Q: toto ale potom treba poslať na server... musíme zase cez socket?
+A: Nie, toto mozete cez Ajax, alebo form
+
+Q: "import a export CSV udajov pouzivatelov (meno, email, heslo, max score, max level) len pre pouzivatela "admin"" ak ten server nevypínam... tak potom načo je tento bod? v čase t1 budem mať registrovaných 3 userov... dám export do súvboru.. v čas t2 budem mať 10 userov.. idem tam len o tom, že dám import t1 a vymažem tých 7 nových?
+A: pre jednoduchost vratis co mas v aktualnej pamati. pre import prepises komplet profily. netreba robit diff a merge.
+
+Q: mozem pri ajaxe vratit odpoved s PINom hry a potom otvorit websocket na adrese ws://localhost:8082/{​​​​​PIN}​​​​​​​​​​​​? Totot je v poriadku takto? A mozem cez websocket posielat aj body a zivoty spolu s mapou? alebo nie?
+A: odporucam mat jeden socket s jednou routou na vsetky spojenia s ws serverom
+
+Q: Zdravim, môžem sa opýtať je nejaka podmienka, ako často treba obnovovať plochu?môže ju  server automaticky posielať, alebo ju musí klient žiadať ? Stačí posielať len zmenené polička? Ďakujem
+A: na toto nie su podmienky, odporucam vzdy posielat celu plochu, nie len zmenene policka
+
+Q: Dobry den, mal by som jednu otazku ku zadaniu. Rad by som sa spytal, aky ma zmysel passovania JSONu zo serveru, ktory obsahuje DOM elementy, ktore nasledne klient spracuvava. Kedze aj tak klient musi dopredu vediet presnu strukturu elemetov, aby mohol vytvorit eventy k danym elementom, takze preco rovno nie su vpisane dane elementy na klientovi a tie elementy sa vytvoria po zavolani funkcie na strane klienta? Alebo mame nejak passovat klientovi aj handlery k danym elementom? Lebo potom to by mi davalo logiku, preco sa passuju dane JSONy, keby k tomu boli aj tie eventy, ale to neviem, ci mame robit, resp.  ako sa to vobec robi.
+A: Podobne ako v mnohych aplikaciach nechces aby pouzivatelia mali pristup k datam z inych stranok ktore nie su pre nich urcene (podla role) - pouzivatel nema co vidiet ani len template admin rozhrania.
+Q: ale event handlery nedifuneje u klienta, ci?
+A: Ak by sme boli plnohodnotny framework, na interakciu by boli od brucha 4 univerzalne handlery ktore sa pripoja podla toho aky kontent sa ma zobrazit. Pre ucely tohto zadania nie je dolezite si komplikovat zivot posielanim/mat genericke hnadlery, takze ako si spravite handleri je na vas.
+
+Q: Dobrý deň, chcel by som sa spýtať či môžeme používať websocket na posielanie stlačenia klávesy. V zadaní nie je uvedený spôsob posielania. A niektorí spolužiaci tvrdia, že to máme robiť cez ajax. Zdá sa mi jednoduchšie to posielať cez websocket, lebo to vieme naviazat ako jednu hru na jedno pripojenie na websocket. Lokálne CSS súbory môžeme nalinkovať priamo do index.html, alebo to musíme riešiť cez ajax. Vďaka za odpoveď.
+Už som to našiel v zadaní, že IBA na vrátenie plochy. Myslím, že na začiatku to tam nebolo. Nie je efektívnejšie a rýchlejšie posielať kláves cez  websocket? Ako máme otvoriť websocket, veď musíme poslať nejakú požiadavku na vrátenie novej hry, nie?
+A: lokalny CSS moze byt aj prilinkovany. S websocketom ti neporadim musis na to prist sam. Hint, ktory davam je ten PIN kod.
+
+Q: cize cez websocket mozem iba prijimat spravy? mozeme prijimat iba spravy s mapou alebo aj so stavom hry alebo PIN? Lebo ja teraz aj stlacenie klavesy posielam cez websocket.
+A: websockety iba na udaje o ploche, nie interakciu
+
+Q: mozem pri ajaxe vratit odpoved s PINom hry a potom otvorit websocket na adrese ws://localhost:8082/{​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​PIN}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​? Totot je v poriadku takto? A mozem cez websocket posielat aj body a zivoty spolu s mapou? alebo nie?
+A: odporucam mat jeden socket s jednou routou na vsetky spojenia s ws serverom
+Q: takze takto to nemoze byt?
+A: moze ak to bude splnat ostatne poziadavky zadania
+Q: a mozem pri odvedi cez websocket posielat aj body zivoty? pripadne rozmery pri prvej odpovedi?
+A: ano
+
+Q: Do csv sa daju lahko ukladat data o pouzivateloch a potom za pouzitia papa parse lahko vyhladavat
+A: Co tam chces vyhladavat? Subor s CSV je iba na ulozenie/nacitanie, ziadna vyhladavacia operacia tam nema co robit
+ale teda aby to bolo jasne, na rozbitie a vytvorenie CSV nepouzivajte kniznicu, staci vam split a join a tie budu dnes na prednaske
+Q: to aby som to prerobil... :,(
+A: tak ked si sa nespytal pred tym ako si to pouzil, ale az potom...
+Q: ked sa uz riesi ten csv, mozeme to mat spravenu logiku sessionov/userov, ze ich mam ulozenych v tom csv, a potom, ked sa prihlasia, tak dana session dostane nejake to idcko ako atribut, na zaklade ktorej potom ju mozem identifikovat?
+A: CSV pre pouzivatelov ma obsahovat: meno, email, heslo, max score, max level - ziaden session tam nie je, ani IDcko ani PIN
+
+Q: Dobrý deň, prosím vás pri práci s express-session mám problém s tým, že keď pristupujem k nejakej premennej pre konkrétnu session cez req.session.premena tak medzi jednotlivými GET/POST sa stráca. Kde by mohol byt prosím problém? 
+A: oddel hry od sessions
+Q: cize vobec neukladat hru do session ale do nejakeho pola napriklad? tak som to rano vyriesila nakoniec.... a kde potom mame vyuzit tie sessions? viaceri sme sa o tom predchvilou rozpravali ze nevieme kde ich mame vlastne vyuzit 
+A: zapni druhy browser a mala by si dostat unikatnu novu hru, nie daku ineho pouzivatela. rovnako ked refreshnes stranku mas stale vidiet svojw skore aj ked nie si prihlasena. bez sessiony stratis toto.
+
+Q: Dobrý deň, chcela by som sa spýtať k zadaniu, konkrétne k bodu týkajúceho sa html->json a opačne. Písali ste, že na serveri je ideálne mať json nie hardkódnutý, tak sa zamýšľam nad tým, ako sa to dá spraviť bez akéhokoľvek hardkódenia. Keďže server nemôže mať uložených viacero html files, z ktorých by čítal html kód a pretransformoval ho na json (ktorý následne pošle klientovi), tak musím mať vždy na serveri hardkódnutý buď html alebo json, či mi niečo uchádza?
+A: Hovoril som o komponentoch. Komponenty (napr. leaderboard) nie su hardcodenute, ale generovane. A nie vzdy vsetky komponenty treba vracat. Priklad: return {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​tag: "div", id: "d"....}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ je lepsie spravit ako return newDiv({​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​id: "d", ...}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​). newLeaderboard() vrati JSON s leaderboardom. Ale ako to budes mat, tak to budes mat, dolezite aby server vracal JSON a nie HTML (vid priklad).
+
+Q: mozeme pouzivatelov a top vysledky ukladat iba ako premenne objektov pri spusteni servera a pri vypnuti sa vymazu? Alebo je treba pouzivat db?
+A: netreba DB, mozu byt zmazane. ked sa server znovu zapne zacina na cistom az kym napr. admin neuploadne novy subor.
